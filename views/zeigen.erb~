@@ -1,8 +1,0 @@
- <h1>Vielen Dank für Ihre Anfrage</h1>
-<div>
-  Name: <%= @contactpost.name %> <br/>
-  E-Mail: <%= @email %><br/>
-  Nachricht: <%= @message %><br/>
-</div>
-
-
