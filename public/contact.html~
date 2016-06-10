@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta data-app-slug="1-admin-app">
+    <meta name="author" content="Eric Yepmo">
+    <meta name="keywords" content="bazinga">
+    <title>Bazinga!</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="bazinga-logo.png" width="272" height="143" alt="Das Bazinga! Firmenlogo" title="Bazinga!" />
+      <h1>Bazinga!</h1>
+      <nav>
+        <a href="index.html">Start</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="imprint.html">Impressum</a>
+      </nav>
+    </header>
+
+    <h2>Fragen? Schreiben Sie uns!</h2>
+
+<div>
+  <form action="/contact" method="post">
+    <div>
+      <label for="name">
+        Name:
+        <input id="name" type="text" name="name" />
+      </label>
+    </div>
+    <div>
+      <label for="email">
+        E-Mail:
+        <input id="email" type="email" name="email" />
+      </label>
+    </div>
+    <div>
+      <label for="message">
+        Nachricht:<br/>
+        <textarea id="message" name="message" cols=50 rows=5></textarea>
+      </label>
+    </div>
+    <div>
+      <input type="submit" value="Absenden" />
+    </div>
+  </form>
+</div>
+
+
+    <footer>
+      <p>Das ist ihr 2. Seitenaufruf.</p>
+      <nav>
+        <a href="/admin.html" title="Admin-Area">Admin</a>
+      </nav>
+    </footer>
+  </body>
+</html>
+
+
+

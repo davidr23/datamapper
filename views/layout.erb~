@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+    <meta data-app-slug="657-huge-tiger">
+    <meta name="author" content="Eric Yepmo">
+    <meta name="keywords" content="bazinga">
+    <title>Bazinga!</title>
+  </head>
+
+  <body>
+         <header>
+      <img src="/bazinga-logo.png" width="272" height="143" alt="Das Bazinga! Firmenlogo" title="Bazinga!" />
+      <h1>Bazinga!</h1>
+      <nav>
+        <a href="/index.html">Start</a>
+        <a href="/contact.html">Kontakt</a>
+        <a href="/imprint.html">Impressum</a>
+      </nav>
+    </header>
+
+
+    <%= yield%>
+
+    <footer>
+      <p>Das ist ihr <%= @counter %>. Seitenaufruf.</p>
+      <nav>
+
+        <a href="/admin.html" title="Admin-Area">Admin</a>
+      </nav>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,20 @@
+  <form action="/admin/contact-requests/<%= @contactpost.id %>" method="get">
+  <input type="hidden" name="_method" value="PUT">
+  <input type="hidden" name="id" value="%<%= @contactpost.id %>">
+
+  <div>
+  <label>
+    Name: <input type="text" name="name" value="<%= @contactpost.name %>">
+    </label></div>
+  <div><label>
+    E-Mail: <input type="text" name="email" value="<%= @contactpost.email %>">
+  </label>
+  </div>
+  <div><label>Message:</label></div>
+  <div><textarea rows=5 cols=40 name="message" ><%= @contactpost.message %></textarea></div>
+  <input type="submit" value="Speichern">
+</form>
+
+
+
+

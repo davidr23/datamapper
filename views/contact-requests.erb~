@@ -1,0 +1,36 @@
+  <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>E-Mail</th>
+      <th>Nachricht</th>
+      <th>Aktionen</th>
+    </tr>
+  </thead>
+  <tbody>
+         
+     <% @contactpost.each do |post| %>
+    
+      <tr>
+        <td>
+        <a href="/admin/contact-requests/<%= post.id %>.html"><%= post.id %></a></td>
+        <td><%= post.name %></td>
+        <td><%= post.email %></td>
+        <td><%= post.message %></td>
+        <td>
+          <a href="/admin/contact-requests/<%= post.id %>.html"><button>Anzeigen</button></a>
+          <form action="/admin/contact-requests/<%= post.id %>" method="get" >
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<%= post.id %>">
+            <input type="submit" value="Löschen">
+            <a href="/admin/contact-requests/<%= post.id %>/edit.html"><button>Bearbeiten</button></a>
+          </form>					
+          
+        </td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
