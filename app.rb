@@ -61,13 +61,12 @@ class MyApp < Sinatra::Base
       protected!
       erb :admin
   end
-
+ 
+  # Auflisten aller kontaktanfragen
   get '/admin/contact-requests.html' do
        @contactpost = ContactRequest.all
        erb :'/contact-requests'
   end
-
-
 
  get '/admin/contact-requests/:id.html' do
      @contactpost = ContactRequest.get(params[:id])
@@ -96,17 +95,6 @@ class MyApp < Sinatra::Base
      ContactRequest.get(id).destroy
      redirect '/admin/contact-requests.html'
   end
-
-  # Read
- # delete '/admin/contact-requests/:id' do |id|
-      #contactpost = ContactRequest.new(params[:contactpost]) 
-  #    @contactpost = ContactRequest.get(id)    #find(id)
-      #@contactpost = ContactRequest.get(params[:id])
-      
-  #   ContactRequest.get(id).destroy
-  #   redirect '/admin/contact-requests.html'
-  #end 
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0
